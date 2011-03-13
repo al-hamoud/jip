@@ -7,7 +7,7 @@ public abstract class Root
 {
     protected String nodeName = "";
 
-    protected String path = "";
+    protected StringBuffer path = new StringBuffer();
 
     protected Map<String, Root> childFolder  = new HashMap<String, Root>();
 
@@ -17,23 +17,21 @@ public abstract class Root
         this.successor = successor;
     }
 
-    private void doChain(String path, Root next){
+    private void doChain(Root next){
         
-        if(next == null){
-            this.path = path;
-        }// endinf of if stmt.
+        if(next != null){
+            String addPath = next.getNodeName() + "/";
+            path.insert(0, addPath);
 
-        else{
-            path += next.getNodeName();
-            this.doChain(path, next.getSuccessor());
-        }// end of else stmt.
+            this.doChain(next.getSuccessor());
+        }// endinf of if stmt.
         
     }// end of doChain 
     public String getFullPath(){
         String mpath = this.getNodeName();
-        this.doChain(mpath, this.successor);
+        this.doChain(this.successor);
         
-        return this.path;
+        return (path.append(mpath)).toString();
     }
 
     public abstract Map<String, Root> returnNodesAsMap();
