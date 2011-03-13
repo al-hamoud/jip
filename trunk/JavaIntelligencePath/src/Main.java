@@ -61,7 +61,7 @@ public class Main
         /* Adding courses folder into ar folder **/
         ar.add(coursesAR);
 
-        System.out.println(fr.getFullPath());
+        System.out.println(index.getFullPath());
 
   }// end of main method
     
