@@ -18,33 +18,33 @@ class CompositeFolder extends Root
         return this.nodeName;
     }
     //Adds the root to the composition.
-    public boolean add(String nodeName, Root folder)
+    public boolean add(Root folder)
     {
-        if(childFolder.containsKey(nodeName)){
+        if(childFolder.contains(folder)){
             return false;
             //throw new UnsupportedOperationException("Not supported yet.");
         } else{
-            childFolder.put(nodeName, folder);
+            childFolder.add(folder);
             return true;
         }
         
         
     } /* Ending of add method **/
     //Removes the root from the composition.
-    public boolean remove(String nodeName)
+    public boolean remove(Root folder)
     {
-          if(childFolder.containsKey(nodeName)){
+          if(childFolder.contains(folder)){
             return false;
             //throw new UnsupportedOperationException("Not supported yet.");
         } else{
-            childFolder.remove(nodeName);
+            childFolder.remove(folder);
             return true;
         }
 
     } /* Ending of remove method **/
     public Set returnNodesAsSet()
     {
-        return this.childFolder.entrySet();
+        return this.childFolder;
     }/* Ending of returnNodesAsSet **/
 
     public boolean IsFolder() {
@@ -55,11 +55,6 @@ class CompositeFolder extends Root
     public Root getSuccessor() {
         
         return this.successor;
-    }
-
-    @Override
-    public Map<String, Root> returnNodesAsMap() {
-        return this.childFolder;
     }
 
 } /** Ending of class CompositeFolder */

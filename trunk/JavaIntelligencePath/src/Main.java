@@ -10,10 +10,10 @@ public class Main
 
         
         /** / */
-        CompositeFolder root = new CompositeFolder("/");
+        CompositeFolder root = new CompositeFolder();
 
         /**  /en/ */
-        CompositeFolder en = new CompositeFolder("en");
+        CompositeFolder en = new CompositeFolder("en-US");
         en.setSuccessor(root);
 
         /** /ar */
@@ -28,14 +28,14 @@ public class Main
         CompositeFolder homeEN = new CompositeFolder("Home");
         homeEN.setSuccessor(en);
 
-        homeEN.add("index", index);
+        homeEN.add(index);
         index.setSuccessor(homeEN);
 
         /** /en/courses/ */
         CompositeFolder coursesEN = new CompositeFolder("Courses");
         coursesEN.setSuccessor(en);
         
-        coursesEN.add("index", new PageFile("index.html"));
+        coursesEN.add(new PageFile("index.html"));
 
          /** /ar/home/ */
         CompositeFolder homeAR = new CompositeFolder("Home");
@@ -46,30 +46,28 @@ public class Main
         coursesAR.setSuccessor(ar);
 
                 /* Adding en folder into Root **/
-        root.add("en-us", en);
+        root.add(en);
 
         /* Adding ar folder into Root **/
-        if (root.add("ar-eg", ar)){
+        if (root.add(ar)){
             System.out.println("it's done");
         }else{
             System.out.println("unfortunately");
         }
 
         /* Adding home folder into en folder **/
-        en.add("Home", homeEN);
+        en.add(homeEN);
 
         /* Adding courses folder into en folder **/
-        en.add("Courses", coursesEN);
+        en.add(coursesEN);
 
         /* Adding home folder into ar folder **/
-        ar.add("Home", homeAR);
+        ar.add(homeAR);
 
         /* Adding courses folder into ar folder **/
-        ar.add("Courses", coursesAR);
+        ar.add(coursesAR);
 
-        homeEN.add("default", new PageFile("default.jsp"));
-
-        System.out.println("" + index.getFullPath());
+        System.out.println(index.getFullPath());
 
   }// end of main method
     
