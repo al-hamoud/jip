@@ -45,9 +45,6 @@ public class Main
          /** /ar/courses/ */
         CompositeFolder coursesAR = new CompositeFolder("Courses");
 
-
-
-
         /* Adding courses folder into en folder **/
         en.add(coursesEN);
 
