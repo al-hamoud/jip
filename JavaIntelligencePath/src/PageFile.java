@@ -1,4 +1,8 @@
-
+/*
+ * @author Ihsan Al-Hamoud
+ * @Web www.al-hamoud.com
+ * @version 1.0
+ */
 import java.util.Set;
 
 class PageFile extends Root
