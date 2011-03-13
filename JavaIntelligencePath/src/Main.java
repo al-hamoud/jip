@@ -14,43 +14,33 @@ public class Main
 
         
         /** / */
-        CompositeFolder root = new CompositeFolder();
+        CompositeFolder root = new CompositeFolder("MyApp");
 
         /**  /en/ */
-        CompositeFolder en = new CompositeFolder("en-US");
-        en.setSuccessor(root);
+        CompositeFolder en = new CompositeFolder("en");
+        root.add(en);
 
         /** /ar */
         CompositeFolder ar = new CompositeFolder("ar");
-        ar.setSuccessor(root);
 
-        CompositeFolder fr  = new CompositeFolder("en");
-        fr.setSuccessor(root);
-        //Composes the folders
+        CompositeFolder fr  = new CompositeFolder("fr");
+        root.add(fr);
 
         /** /en/home/ */
         CompositeFolder homeEN = new CompositeFolder("HOME");
-        homeEN.setSuccessor(en);
 
         homeEN.add(index);
-        index.setSuccessor(homeEN);
 
         /** /en/courses/ */
         CompositeFolder coursesEN = new CompositeFolder("Courses");
-        coursesEN.setSuccessor(en);
         
         coursesEN.add(new PageFile("index.html"));
 
          /** /ar/home/ */
         CompositeFolder homeAR = new CompositeFolder("Home");
-        homeAR.setSuccessor(ar);
 
          /** /ar/courses/ */
         CompositeFolder coursesAR = new CompositeFolder("Courses");
-        coursesAR.setSuccessor(ar);
-
-                /* Adding en folder into Root **/
-        root.add(en);
 
         /* Adding ar folder into Root **/
         if (root.add(ar)){
@@ -71,7 +61,7 @@ public class Main
         /* Adding courses folder into ar folder **/
         ar.add(coursesAR);
 
-        System.out.println(homeEN.getFullPath());
+        System.out.println(fr.getFullPath());
 
   }// end of main method
     

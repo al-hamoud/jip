@@ -124,7 +124,7 @@ public abstract class Root
     }/* Ending of getFullPath method **/
     
     public abstract String getNodeName();
-    public abstract Root getSuccessor();
+    protected abstract Root getSuccessor();
     public abstract boolean IsFolder();
     public abstract Set<Root> returnNodesAsSet();
     
