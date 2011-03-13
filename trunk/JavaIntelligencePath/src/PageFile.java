@@ -28,7 +28,7 @@ class PageFile extends Root
     }
     
     @Override
-    public Root getSuccessor() {
+    protected Root getSuccessor() {
         return this.successor;
     }
 
