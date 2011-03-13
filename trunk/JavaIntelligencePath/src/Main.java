@@ -22,6 +22,7 @@ public class Main
 
         /** /ar */
         CompositeFolder ar = new CompositeFolder("ar");
+        root.add(ar);
 
         CompositeFolder fr  = new CompositeFolder("fr");
         root.add(fr);
@@ -29,6 +30,8 @@ public class Main
         /** /en/home/ */
         CompositeFolder homeEN = new CompositeFolder("HOME");
 
+                /* Adding home folder into en folder **/
+        en.add(homeEN);
         homeEN.add(index);
 
         /** /en/courses/ */
@@ -42,15 +45,8 @@ public class Main
          /** /ar/courses/ */
         CompositeFolder coursesAR = new CompositeFolder("Courses");
 
-        /* Adding ar folder into Root **/
-        if (root.add(ar)){
-            System.out.println("it's done");
-        }else{
-            System.out.println("unfortunately");
-        }
 
-        /* Adding home folder into en folder **/
-        en.add(homeEN);
+
 
         /* Adding courses folder into en folder **/
         en.add(coursesEN);
@@ -65,6 +61,6 @@ public class Main
 
   }// end of main method
     
-}/// end of class
+}/// end of class for testing 
 
    
