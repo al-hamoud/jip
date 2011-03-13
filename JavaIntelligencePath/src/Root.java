@@ -1,15 +1,16 @@
 
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public abstract class Root
 {
+    private static final String SLASH = "/";
     protected String nodeName = "";
 
     protected StringBuffer path = new StringBuffer();
 
-    protected Map<String, Root> childFolder  = new HashMap<String, Root>();
+    protected Set<Root> childFolder  = new HashSet<Root>();
 
     protected Root successor = null;
 
@@ -20,9 +21,8 @@ public abstract class Root
     private void doChain(Root next){
         
         if(next != null){
-            String addPath = next.getNodeName() + "/";
+            String addPath = next.getNodeName() + Root.SLASH;
             path.insert(0, addPath);
-
             this.doChain(next.getSuccessor());
         }// endinf of if stmt.
         
@@ -33,8 +33,6 @@ public abstract class Root
         
         return (path.append(mpath)).toString();
     }
-
-    public abstract Map<String, Root> returnNodesAsMap();
     public abstract String getNodeName();
     public abstract Root getSuccessor();
     public abstract boolean IsFolder();

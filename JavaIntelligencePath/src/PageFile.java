@@ -1,5 +1,4 @@
 
-import java.util.Map;
 import java.util.Set;
 
 class PageFile extends Root
@@ -21,17 +20,12 @@ class PageFile extends Root
 
     public Set returnNodesAsSet() {
         
-        return this.childFolder.entrySet();
+        return this.childFolder;
     }
     
     @Override
     public Root getSuccessor() {
         return this.successor;
-    }
-
-    @Override
-    public Map<String, Root> returnNodesAsMap() {
-        return this.childFolder;
     }
 
 }/** Ending of class PageFile*/
