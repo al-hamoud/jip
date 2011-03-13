@@ -12,9 +12,13 @@
  *
  * @intent
  * Compose objects into tree structures to represent part-whole hierarchies
- * The composite pattern implements Transparently instead of Safety
- * Therefore the storage is included in the superclass 
+ * The composite pattern implements Transparently instead of Safety,
+ * to implement the Chain of Responsibility pattern
+ * by instantiating an instance of Root that presents a successor in CoR
+ * inside the Root class itself 
  */
+
+
 import java.util.HashSet;
 import java.util.Set;
 
