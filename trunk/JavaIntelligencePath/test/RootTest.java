@@ -36,9 +36,6 @@ public class RootTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of setSuccessor method, of class Root.
-     */
     @Test
     public void testSetSuccessor() {
         System.out.println("setSuccessor");
@@ -49,9 +46,6 @@ public class RootTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getFullPath method, of class Root.
-     */
     @Test
     public void testGetFullPath() {
         System.out.println("getFullPath");
