@@ -104,9 +104,9 @@ public abstract class Root
             path.insert(0, addPath);
             /* call doChain inside current node iteration by iteration*/
             this.doChain(next.getSuccessor());
-        }// endinf of if stmt.
+        }/* Endinf of if stmt. **/
         
-    }// end of doChain
+    }/* End of doChain method **/
 
      /*
      * @method
@@ -121,7 +121,7 @@ public abstract class Root
         this.doChain(this.successor);
         
         return (path.append(currentPath)).toString();
-    }// Ending of getFullPath method
+    }/* Ending of getFullPath method **/
     
     public abstract String getNodeName();
     public abstract Root getSuccessor();
