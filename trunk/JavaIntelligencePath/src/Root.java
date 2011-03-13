@@ -1,3 +1,20 @@
+/*
+ * @author Ihsan Al-Hamoud
+ * @web www.al-hamoud.com
+ * @Project JIA "Java Intelligence Path" Framework
+ * @version 1.0
+ *
+ *
+ * @pattern Composite & Chain of Responsibility
+ * @class superclass Root
+ * @type abstract
+ * @access public
+ *
+ * @intent
+ * Compose objects into tree structures to represent part-whole hierarchies
+ * The composite pattern implements Transparently instead of Safety
+ * Therefore the storage is included in the superclass 
+ */
 import java.util.HashSet;
 import java.util.Set;
 
