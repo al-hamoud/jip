@@ -25,9 +25,10 @@ class CompositeFolder extends Root
     {
         if(childFolder.contains(folder)){
             return false;
-            //throw new UnsupportedOperationException("Not supported yet.");
         } else{
+            folder.setSuccessor(this);
             childFolder.add(folder);
+
             return true;
         }
         
