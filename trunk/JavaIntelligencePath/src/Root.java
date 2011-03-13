@@ -1,14 +1,13 @@
-
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public abstract class Root
 {
     private static final String SLASH = "/";
+    
     protected String nodeName = "";
 
-    protected StringBuffer path = new StringBuffer();
+    private StringBuffer path = new StringBuffer();
 
     protected Set<Root> childFolder  = new HashSet<Root>();
 

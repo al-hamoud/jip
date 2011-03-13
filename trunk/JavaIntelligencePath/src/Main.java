@@ -25,7 +25,7 @@ public class Main
         //Composes the folders
 
         /** /en/home/ */
-        CompositeFolder homeEN = new CompositeFolder("Home");
+        CompositeFolder homeEN = new CompositeFolder("HOME");
         homeEN.setSuccessor(en);
 
         homeEN.add(index);
@@ -67,7 +67,7 @@ public class Main
         /* Adding courses folder into ar folder **/
         ar.add(coursesAR);
 
-        System.out.println(index.getFullPath());
+        System.out.println(homeEN.getFullPath());
 
   }// end of main method
     
