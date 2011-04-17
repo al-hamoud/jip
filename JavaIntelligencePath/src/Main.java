@@ -2,6 +2,9 @@
  * @author Ihsan Al-Hamoud
  * @Web www.al-hamoud.com
  * @version 1.0
+ *
+ * Adding Iteration pattern
+ * coming very soon
  */
 public class Main
 {
@@ -10,7 +13,7 @@ public class Main
     {
         //Initialize three composite folders
 
-        PageFile index = new PageFile("index.php");
+        PageFile index = new PageFile("index.jsp");
 
         
         /** / */
